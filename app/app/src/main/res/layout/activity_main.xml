@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradien">
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="114dp"
+            android:layout_height="110dp"
+            android:background="@drawable/background_shadows" />
+    </FrameLayout>
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:background="@drawable/background_gradient1" />
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:scaleType="fitXY"
+            android:id="@+id/btnSpeech"
+            android:src="@drawable/ic_mic_black_128dp" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="310dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="114dp"
+            android:layout_height="110dp"
+            android:background="@drawable/background_shadows" />
+    </FrameLayout>
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="310dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:background="@drawable/background_gradient1" />
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:scaleType="fitXY"
+            android:id="@+id/btnQuiz"
+            android:src="@drawable/ic_view_quilt_black_128dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="114dp"
+            android:layout_height="110dp"
+            android:background="@drawable/background_shadows" />
+    </FrameLayout>
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@color/colorTrans"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="180dp"
+       >
+
+        <View
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:background="@drawable/background_gradient1" />
+
+        <ImageView
+            android:id="@+id/btnListen"
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_headset_black_128dp" />
+    </FrameLayout>
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="310dp"
+        android:background="@color/colorTrans"
+        >
+
+        <View
+            android:layout_width="114dp"
+            android:layout_height="110dp"
+            android:background="@drawable/background_shadows" />
+    </FrameLayout>
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@color/colorTrans"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="310dp"
+        >
+
+        <View
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:background="@drawable/background_gradient1" />
+
+        <ImageView
+            android:id="@+id/btnRememberImg"
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_widgets_black_128dp" />
+    </FrameLayout>
+
+</RelativeLayout>
