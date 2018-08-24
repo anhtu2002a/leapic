@@ -306,13 +306,13 @@
                         <p>We'll send you epic weekly blogs, whitepapers and things to make your app startup thrive, all FREE!</p>
                     </div>
                     <div class="address-text">
-                        <p><span>Address:</span> 40 Baria Sreet 133/2 NewYork City, US</p>
+                        <p><span>Address:</span> 12 Nguyễn Văn Bảo, Gò Vấp, HCM</p>
                     </div>
                     <div class="phone-text">
-                        <p><span>Phone:</span> +11-225-888-888-66</p>
+                        <p><span>Phone:</span> +84 963 197 515</p>
                     </div>
                     <div class="email-text">
-                        <p><span>Email:</span> info.deercreative@gmail.com</p>
+                        <p><span>Email:</span> info.leapic@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-md-6">

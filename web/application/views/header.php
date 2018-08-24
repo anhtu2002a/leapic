@@ -38,17 +38,18 @@
                             <a class="navbar-brand" href="homepage">Ca.</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                             <!-- Menu Area -->
-                            <div class="collapse navbar-collapse" id="ca-navbar">
+                            <div class="collapse navbar-collapse col-lg-10" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item"><a class="nav-link" href="homepage">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="demogame">Game</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="demogame">Game</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                                 </ul>
-                                <div class="sing-up-button d-lg-none">
+                                <!-- Reponsive Buton -->
+                                <div class="sing-up-button d-lg-none d-md-none">
                                     <a href="#">Log in</a>
                                 </div>
                             </div>

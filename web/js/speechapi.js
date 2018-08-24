@@ -1,4 +1,4 @@
-                      var final_transcript = '';
+                      var final_transcript = ' ';
                       var recognizing = false;
 
                     if ('webkitSpeechRecognition' in window) {
@@ -10,6 +10,7 @@
                       
                       recognition.onstart = function() {
                         recognizing = true;
+                        $("#start_button").attr('src','/WebAppLeng/img/game-img/microphone2.png');
                         $("#recording").text('Đang nghe nè!').show().fadeOut(4000);
                         $("#question").hide();
                         // Jquery kiem tra ket qua
@@ -21,6 +22,7 @@
                           }
                         },4000);
                         $("#kq").attr('src','/WebAppLeng/img/game-img/Ans-img.png');
+
                       };
 
                       recognition.onerror = function(event) {
@@ -29,7 +31,7 @@
 
                       recognition.onend = function() {
                         recognizing = false;
-
+                        $("#start_button").attr('src','/WebAppLeng/img/game-img/microphone1.png');
                       };
 
                       recognition.onresult = function(event) {

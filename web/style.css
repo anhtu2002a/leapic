@@ -1290,12 +1290,15 @@ p {
 .footer-menu {
     margin-bottom: 15px;
 }
-
 .copyright-text > p {
     margin-bottom: 0;
 }
 #start_button:active {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     cursor: zoom-out;
+    text-shadow: 2px 2px 4px red;
+}
+p.mean{
+    font-weight: bold;
 }

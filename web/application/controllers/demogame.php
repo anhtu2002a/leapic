@@ -12,10 +12,10 @@ class demogame extends CI_Controller {
 		//load view
 		//$this->load->view('demogame_view'); 
 		//load model bang ham getdatabase trong model
-		$this->load->model('demogame_model');
-		$dulieu = $this->demogame_model->getdatabase();
-		$dulieu = array('dulieutucontroller' => $dulieu); // bien du lieu thanh mang voi key la dulieucontroller
-		$this->load->view('demogame_view', $dulieu, FALSE);
+		// $this->load->model('demogame_model');
+		// $dulieu = $this->demogame_model->getdatabase();
+		// $dulieu = array('dulieutucontroller' => $dulieu); // bien du lieu thanh mang voi key la dulieucontroller
+		$this->load->view('demogame_view');
 	}
 }
 
