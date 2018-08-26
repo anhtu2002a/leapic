@@ -4,8 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTrans">#00ff4081</color>
-    <color name="colorSpeech">#d1e5ea</color>
+    <color name="colorSpeech">#e7eef1</color>
     <color name="colorShadows">#767d81</color>
-    <color name="colorIcon">#7ed6df</color>
+    <color name="colorIcon">#69d1dc</color>
+    <color name="colorIconUnselect">#82d2da</color>
     <color name="colorWhite">#ffffff</color>
 </resources>

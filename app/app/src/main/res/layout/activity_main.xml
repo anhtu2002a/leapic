@@ -40,11 +40,12 @@
             android:background="@drawable/background_gradient1" />
 
         <ImageView
+            android:id="@+id/btnSpeech"
             android:layout_width="112dp"
             android:layout_height="108dp"
             android:scaleType="fitXY"
-            android:id="@+id/btnSpeech"
-            android:src="@drawable/ic_mic_black_128dp" />
+            android:padding="20dp"
+            android:src="@drawable/microphone1" />
     </FrameLayout>
 
 
@@ -85,7 +86,8 @@
             android:layout_height="108dp"
             android:scaleType="fitXY"
             android:id="@+id/btnQuiz"
-            android:src="@drawable/ic_view_quilt_black_128dp" />
+            android:padding="20dp"
+            android:src="@drawable/puzzle1" />
     </FrameLayout>
 
     <FrameLayout
@@ -127,7 +129,8 @@
             android:layout_width="112dp"
             android:layout_height="108dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_headset_black_128dp" />
+            android:padding="20dp"
+            android:src="@drawable/headphones1" />
     </FrameLayout>
     <FrameLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -168,7 +171,8 @@
             android:layout_width="112dp"
             android:layout_height="108dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_widgets_black_128dp" />
+            android:padding="20dp"
+            android:src="@drawable/game1" />
     </FrameLayout>
 
 </RelativeLayout>

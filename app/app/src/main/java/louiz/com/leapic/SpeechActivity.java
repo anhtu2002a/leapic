@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -84,15 +85,18 @@ public class SpeechActivity extends AppCompatActivity {
                 if(matches!=null){
                     if(matches.get(0).equalsIgnoreCase("hello")){
                         img.setImageResource(R.drawable.right);
+                        button.setImageResource(R.drawable.microphone1);
                     }
                     else {
                         img.setImageResource(R.drawable.wrong);
+                        button.setImageResource(R.drawable.microphone1);
                     }
 
                     editText.setText(matches.get(0));
                 }
                 else {
                     editText.setText("Vui lòng thử lại");
+                    button.setImageResource(R.drawable.microphone1);
                 }
 
             }
@@ -113,28 +117,35 @@ public class SpeechActivity extends AppCompatActivity {
         button.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()){
+                switch (motionEvent.getAction()) {
+
+
                     case MotionEvent.ACTION_UP:
-                        speechRecognizer.startListening(speechIntent);
-                        editText.setText("Nói Hello nào :D");
-                    break;
+                        speechRecognizer.stopListening();
+                        editText.setHint("Nói Hello nào :D");
+                        button.setImageResource(R.drawable.microphone1);
+                        break;
                     case MotionEvent.ACTION_DOWN:
                         editText.setText("");
                         editText.setText("Listening...");
                         speechRecognizer.startListening(speechIntent);
-                    break;
+                        button.setImageResource(R.drawable.microphone2);
+                        break;
+
                 }
                 return false;
+
             }
         });
     }
-    private void checkPermission(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if(!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)){
-                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:"+getPackageName()));
-                startActivity(intent);
-                finish();
-            }
+
+    private static final String[] RECORD_AUDIO = { Manifest.permission.RECORD_AUDIO};
+    public void checkPermission()
+    {
+        int permission = ActivityCompat.checkSelfPermission(SpeechActivity.this, Manifest.permission.RECORD_AUDIO);
+        if(permission != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(SpeechActivity.this,RECORD_AUDIO,1);
         }
     }
 
