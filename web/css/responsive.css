@@ -246,6 +246,7 @@
     .get-start-area .email {
         max-width: 370px;
     }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -254,5 +255,9 @@
     }
     .get-start-area .email {
         margin-bottom: 0;
+    }
+    #category_img{
+    width: 140px;
+    height: 140px;
     }
 }

@@ -8,7 +8,7 @@
                     
                     <div class="card-block col-md-12 col-lg-5 rounded" style="background-color: #CFE2E8">
                         <div>
-                            <div class="col-12 " style="background-color: #CFE2E8" id="Learn_img" >
+                            <div class="col-12" style="background-color: #CFE2E8;" id="Learn_img" >
                                 <img src="<?php echo base_url(); ?>img/learn-img/vehicle/bicycle-img.png" id="pic"/>
                                 <hr>
                             </div>
