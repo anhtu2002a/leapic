@@ -233,7 +233,7 @@ p {
 
 .section-heading > h2 {
     font-weight: 300;
-    color: #5b32b4;
+    color: #5ec7dd;
     font-size: 48px;
     margin: 0;
 }
@@ -378,7 +378,7 @@ p {
     color: #fff;
     font-weight: 500;
     display: inline-block;
-    border: 2px solid #a883e9;
+    border: 2px solid #ffffff;
     height: 50px;
     min-width: 178px;
     line-height: 46px;
@@ -387,7 +387,7 @@ p {
 }
 
 .sing-up-button > a:hover {
-    background: #fb397d;
+    background: #1e8294;
     color: #fff;
     border-color: transparent;
     -webkit-transition-duration: 500ms;
@@ -398,7 +398,7 @@ p {
 /* stcicky css */
 
 .header_area.sticky {
-    background-color: #884bdf;
+    background-color: #5ec7dd;
     -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 70px;
@@ -429,7 +429,7 @@ p {
     position: relative;
     z-index: 1;
     background-position: bottom center;
-    background-size: cover;\
+    background-size: cover;
 
 }
 
@@ -1233,13 +1233,13 @@ p {
 -------------------------- */
 
 .footer-text > h2 {
-    color: #5b32b4;
+    color: #5ec7dd;
     font-size: 72px;
     font-weight: 700;
 }
 
 .footer-social-icon > a > i {
-    background: #9b69e4;
+    background: #28a4bd;
     font-size: 14px;
     color: #ffffff;
     height: 40px;
@@ -1428,16 +1428,22 @@ p.mean{
 }
 #category_img{
     margin-top: 20px;
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
 }
 #list_card{
     margin-top: 30px;
+    width: 250px;
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 #list_group{
     padding-top: 100px;
     padding-bottom: 50px;
 }
 #category_name{
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: bold;
 }

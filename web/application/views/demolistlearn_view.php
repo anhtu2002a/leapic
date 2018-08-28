@@ -4,64 +4,20 @@
     <section class="listlearn_area clearfix" id="home" >
         <div class="container h-100">
             <div class="row h-100 align-items-center " id="list_group">
-                <div class="col-4 col-xs-2" id="list_screen" >
+                
+                <?php foreach ($danhsachbaihoc as $key => $value): ?>
+                    <div class="col-4 col-xs-2" id="list_screen">
                     <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
+                        <?php echo '<a href="demolearn?'."ID=".$value['ID'].'"><img  src="data:image/png;base64,'.base64_encode($value['Icon1']).'" class="card-title mx-auto img-fluid" style="" id="category_img" ></img></a>'; ?>
+                        <!-- <img src="<?php //echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img> -->
+                        <p class="card-text" id="category_name"> <?= $value['Name'] ?> </p>
                     </div>
-                </div>       
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
                     </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
-                <div class="col-4 col-xs-2" id="list_screen" >
-                    <div class="card card-block text-center" id="list_card">
-                        <img src="<?php echo base_url(); ?>img/category-img/food1.png" class="card-title mx-auto" style="" id="category_img"></img>
-                        <p class="card-text" id="category_name">Ăn Uống</p>
-                    </div>
-                </div>  
+                <?php endforeach ?>
 
             </div>
         </div>
     </section>
-    <!-- ***** Game Area End ***** -->
+    <!-- ***** Listlearn Area End ***** -->
     
     <?php include('footer.php'); ?>

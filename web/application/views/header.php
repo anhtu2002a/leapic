@@ -35,14 +35,14 @@
                     <div class="menu_area">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <!-- Logo -->
-                            <a class="navbar-brand" href="homepage">Ca.</a>
+                            <a class="navbar-brand" href="homepage">LeaP.</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse col-lg-10" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item"><a class="nav-link" href="homepage">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="demolistlearn">Learn</a></li>
                                     <li class="nav-item"><a class="nav-link" href="demogame">Game</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
