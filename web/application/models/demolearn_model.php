@@ -11,14 +11,14 @@ class demolearn_model extends CI_Model {
 	}
 	public function getdatabase()
 	{
-		$this->db->select('Word_Name,Word_Pic,Word_Ex,Word_Mean,TopicId');  //lay cac cot Word_Name,Word_Pic,Word_Ex tu Table words
+		$this->db->select('*');  //lay cac cot Word_Name,Word_Pic,Word_Ex tu Table words
 		$this->db->from('words');
 		$this->db->join('topic', 'topic.ID = words.TopicId');
 		$words = $this->db->get('');  //lay tu bang topic va luu vao bien words
+
 		$words= $words->result_array(); //bien doi $words thanh 1 mang
 		return $words;
-
-
+		$results = array();
 	}
 }
 

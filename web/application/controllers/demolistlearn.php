@@ -20,7 +20,7 @@ class demolistlearn extends CI_Controller {
 		//var_dump($danhsach);
 		$this->load->view('demolistlearn_view', $danhsach, FALSE);
 	}
-	
+
 
 }
 
