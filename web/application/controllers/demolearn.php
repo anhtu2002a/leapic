@@ -14,6 +14,10 @@ class demolearn extends CI_Controller {
 
 		$volcabulary = $this->demolearn_model->getdatabase();
 		$volcabulary = array('tuvung' => $volcabulary);
+
+		// echo "<pre>";
+		// var_dump($volcabulary);
+		// echo "</pre>";
 		$this->load->view('demolearn_view', $volcabulary, FALSE);
 		
 	}
