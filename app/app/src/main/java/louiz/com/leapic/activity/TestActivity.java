@@ -1,17 +1,13 @@
-package louiz.com.leapic.fragment;
+package louiz.com.leapic.activity;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Activity;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -21,50 +17,35 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 import louiz.com.leapic.R;
-import louiz.com.leapic.activity.LearnEngActivity;
 import louiz.com.leapic.adapter.TopicAdapter;
 import louiz.com.leapic.model.Topic;
 
-import static android.content.Context.MODE_PRIVATE;
-
-public class LearnEngFragment extends Fragment {
-
+public class TestActivity extends Activity {
 
     String DATABASE_NAME="LeaPic.sqlite";
     String DB_PATH_SUFFIX = "/databases/";
     SQLiteDatabase database = null;
+
     GridView gridView;
     ArrayList<Topic> topics;
     TopicAdapter adapter = null;
 
-    public LearnEngFragment(){
 
-    };
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View PageTree = inflater.inflate(R.layout.fragment_learn_eng,container,false);
-
-        return  PageTree;
-
-    }
+    
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test);
         ProcessCopyDatabase();
-        gridView = view.findViewById(R.id.gridTest);
-        topics = new ArrayList<>();
-        adapter = new TopicAdapter(getContext(),R.layout.topic_items,topics);
-        gridView.setAdapter(adapter);
-        showAllNames();
+        addControl();
         addEvent();
-
+        showAllNames();
     }
+
     private void showAllNames() {
 
-        database = getContext().openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
+        database = openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
         Cursor cursor = database.rawQuery("select * FROM Topic",null);
         topics.clear();
         while (cursor.moveToNext()){
@@ -84,19 +65,24 @@ public class LearnEngFragment extends Fragment {
     }
 
     private void addEvent() {
+    }
+
+    private void addControl() {
+        gridView = findViewById(R.id.gridTest);
+        topics = new ArrayList<>();
+        adapter = new TopicAdapter(this,R.layout.topic_items,topics);
+        gridView.setAdapter(adapter);
 
     }
 
-
-
     private  void ProcessCopyDatabase(){
-        File dbFile = getActivity().getDatabasePath(DATABASE_NAME);
+        File dbFile = getDatabasePath(DATABASE_NAME);
         if(!dbFile.exists()){
             try {
                 CopyDataBaseFromAsset();
 
             }catch (Exception ex){
-                Toast.makeText(getContext(), ex.toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(this, ex.toString(),Toast.LENGTH_LONG).show();
 
             }
         }
@@ -106,9 +92,9 @@ public class LearnEngFragment extends Fragment {
 
     private void CopyDataBaseFromAsset() {
         try{
-            InputStream myInput = getContext().getAssets().open(DATABASE_NAME);
+            InputStream myInput = getAssets().open(DATABASE_NAME);
             String outFileName = GetPath();
-            File f = new File(getContext().getApplicationInfo().dataDir+DB_PATH_SUFFIX);
+            File f = new File(getApplicationInfo().dataDir+DB_PATH_SUFFIX);
             if(!f.exists()){
                 f.mkdir();
             }
@@ -129,10 +115,9 @@ public class LearnEngFragment extends Fragment {
     }
 
     private String GetPath(){
-        return getContext().getApplicationInfo().dataDir+DB_PATH_SUFFIX+DATABASE_NAME;
+        return getApplicationInfo().dataDir+DB_PATH_SUFFIX+DATABASE_NAME;
 
     }
-
 
 
 

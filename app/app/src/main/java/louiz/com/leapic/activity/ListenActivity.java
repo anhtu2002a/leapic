@@ -1,4 +1,4 @@
-package louiz.com.leapic;
+package louiz.com.leapic.activity;
 
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
+
+import louiz.com.leapic.R;
 
 public class ListenActivity extends AppCompatActivity {
     String txtCheck;
