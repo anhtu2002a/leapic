@@ -7,7 +7,7 @@
                 <?php foreach ($danhsachbaihoc as $key => $value): ?>
                     <div class="col-4 col-xs-2" id="list_screen">
                     <div class="card card-block text-center" id="list_card">
-                        <?php echo '<a href="demolearn?'."ID=".$value['ID'].'"><img  src="data:image/png;base64,'.base64_encode($value['Icon1']).'" class="card-title mx-auto img-fluid" id="category_img"></img></a>'; ?>
+                        <?php echo '<a href="demolistlearn/detailWords/'.$value['ID'].'"><img  src="data:image/png;base64,'.base64_encode($value['Icon1']).'" class="card-title mx-auto img-fluid" id="category_img"></img></a>'; ?>
                         <p class="card-text" id="category_name"> <?= $value['Name'] ?> </p>
                     </div>
                     </div>
@@ -15,7 +15,6 @@
             </div>
         </div>
     </section>
-    <!-- <script>alert("Chọn bài học");</script> -->
     <!-- ***** Listlearn Area End ***** -->
     
     <?php include('footer.php'); ?>

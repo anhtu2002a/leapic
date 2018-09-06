@@ -1588,3 +1588,6 @@ p.mean{
     font-size: 20px;
     font-weight: bold;
 }
+.swiper-container{
+    width: 100px;
+}
