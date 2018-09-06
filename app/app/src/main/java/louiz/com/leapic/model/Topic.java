@@ -13,6 +13,13 @@ public class Topic {
         this.pic = pic;
         this.picClick = picClick;
     }
+    public Topic(int iD, int typeId, String name, byte[] pic) {
+        this.iD = iD;
+        this.typeId = typeId;
+        Name = name;
+        this.pic = pic;
+        this.picClick = picClick;
+    }
 
     public int getiD() {
         return iD;

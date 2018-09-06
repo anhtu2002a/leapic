@@ -6,9 +6,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import louiz.com.leapic.Fragment.GameEngFragment;
-import louiz.com.leapic.Fragment.LearnEngFragment;
-import louiz.com.leapic.Fragment.SettingEngFragment;
+import louiz.com.leapic.fragment.GameEngFragment;
+import louiz.com.leapic.fragment.LearnEngFragment;
+import louiz.com.leapic.fragment.SettingEngFragment;
 
 public class FragmentAdaper  extends FragmentPagerAdapter{
 

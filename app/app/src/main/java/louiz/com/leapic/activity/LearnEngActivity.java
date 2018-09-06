@@ -1,12 +1,12 @@
-package louiz.com.leapic;
+package louiz.com.leapic.activity;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -15,53 +15,57 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 
-public class TestActivity extends Activity {
+import louiz.com.leapic.R;
+import louiz.com.leapic.adapter.FragmentAdaper;
+import louiz.com.leapic.adapter.WordSliderAdapter;
+import louiz.com.leapic.model.Topic;
+import louiz.com.leapic.model.Word;
 
+public class LearnEngActivity extends AppCompatActivity {
     String DATABASE_NAME="LeaPic.sqlite";
     String DB_PATH_SUFFIX = "/databases/";
     SQLiteDatabase database = null;
-    ListView lvTest;
-
-    ArrayList<String> names;
-    ArrayAdapter<String> namesAdapter;
-    
-
+    ArrayList<Word> wordsList = new ArrayList<>();
+    ViewPager viewPager;
+    PagerAdapter adapter;
+    int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_learn_eng);
+        getSupportActionBar().setElevation(0);
         ProcessCopyDatabase();
         addControl();
+        importWordList();
         addEvent();
-        showAllNames();
+
     }
 
-    private void showAllNames() {
-
+    private void importWordList() {
         database = openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
-        Cursor cursor = database.rawQuery("select * FROM Topic",null);
-        names.clear();
+        Cursor cursor = database.rawQuery("select * FROM Word where TopicId = 1",null);
+        wordsList.clear();
         while (cursor.moveToNext()){
-            cursor.getInt(0);
-            String name = cursor.getString(1);
-            names.add(name);
+            int idWord = cursor.getInt(0);
+            String nameWord = cursor.getString(1);
+            Word word = new Word(idWord,nameWord);
+            wordsList.add(word);
         }
         cursor.close();
-        namesAdapter.notifyDataSetChanged();
+        adapter.notifyDataSetChanged();
+
+    }
+
+    private void addControl() {
+        viewPager = findViewById(R.id.viewpager);
+        adapter = new WordSliderAdapter(LearnEngActivity.this,wordsList);
+        viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(position,true);
 
 
     }
 
     private void addEvent() {
-    }
-
-    private void addControl() {
-        lvTest = findViewById(R.id.lvTest);
-        names = new ArrayList<>();
-        namesAdapter = new ArrayAdapter<String>(
-                TestActivity.this,android.R.layout.simple_list_item_1,names);
-        lvTest.setAdapter(namesAdapter);
-
     }
 
     private  void ProcessCopyDatabase(){
@@ -71,7 +75,7 @@ public class TestActivity extends Activity {
                 CopyDataBaseFromAsset();
 
             }catch (Exception ex){
-                Toast.makeText(this, ex.toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(), ex.toString(),Toast.LENGTH_LONG).show();
 
             }
         }

@@ -1,22 +1,11 @@
-package louiz.com.leapic;
+package louiz.com.leapic.activity;
 
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.support.v4.app.FragmentManager;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import louiz.com.leapic.Fragment.GameEngFragment;
-import louiz.com.leapic.Fragment.LearnEngFragment;
-import louiz.com.leapic.Fragment.SettingEngFragment;
+import louiz.com.leapic.R;
 import louiz.com.leapic.adapter.FragmentAdaper;
 
 public class HomeEngActivity extends AppCompatActivity {

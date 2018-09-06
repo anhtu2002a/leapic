@@ -1,4 +1,4 @@
-package louiz.com.leapic.Fragment;
+package louiz.com.leapic.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
