@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	
-	class words {
+	class Words {
     	private  $id;
         private  $learn;
         private  $TopicId;
@@ -227,4 +227,3 @@
         return $this;
     }
 }
-

@@ -44,9 +44,9 @@ class demolistlearn_model extends CI_Model {
 		$this->db->where('TopicId', $ID);
 		$this->db->from('words');
 		$this->db->join('topic', 'topic.ID = words.TopicId');
-		$words= $this->db->get('');  //lay tu bang topic va luu vao bien words
-		$words= $Word->result_array(); //bien doi $words thanh 1 mang
-		return $Word;
+		$Words= $this->db->get('');  //lay tu bang words va luu vao bien words
+		$Words= $Words->result(); //bien doi $words thanh 1 mang objec
+		return $Words;
 	}
 }
 

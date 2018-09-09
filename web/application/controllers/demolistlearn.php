@@ -6,8 +6,6 @@ class Demolistlearn extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('demolistlearn_model');
-		$this->load->library('words');
-		//$this->load->model('words');
 	}
 
 	public function index()
@@ -24,8 +22,8 @@ class Demolistlearn extends CI_Controller {
 	}
 	public function detailWords($idword)
 	{
-		$vol = $this -> demolistlearn_model -> getWordsByID($idword);
-		$vol = array('tuvung' => $vol);
+		$vol['vol'] = $this -> demolistlearn_model -> getWordsByID($idword);
+		// $vol = array('tuvung' => $vol);
 		// echo "<pre>";
 		// var_dump($volcabulary);
 
