@@ -40,6 +40,8 @@
     <script src="<?php echo base_url(); ?>js/active.js"></script>
     <!-- Speech API JS -->
     <script src="<?php echo base_url(); ?>js/speechapi.js"></script>
+
+    <script src="<?php echo base_url(); ?>dist/js/swiper.min.js"></script>
     </body>
 
 </html>

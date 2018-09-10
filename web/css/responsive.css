@@ -26,6 +26,11 @@
     .header_area.sticky .menu_area #nav .nav-link {
         padding: 23px 7.5px;
     }
+    #word_img{
+    margin-top: 20px;
+    width: 370px;
+    height: 370px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

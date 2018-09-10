@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class demogame extends CI_Controller {
+class Demogame extends CI_Controller {
 
 	public function __construct()
 	{
@@ -9,12 +9,6 @@ class demogame extends CI_Controller {
 
 	public function index()
 	{
-		//load view
-		//$this->load->view('demogame_view'); 
-		//load model bang ham getdatabase trong model
-		// $this->load->model('demogame_model');
-		// $dulieu = $this->demogame_model->getdatabase();
-		// $dulieu = array('dulieutucontroller' => $dulieu); // bien du lieu thanh mang voi key la dulieucontroller
 		$this->load->view('demogame_view');
 	}
 }
