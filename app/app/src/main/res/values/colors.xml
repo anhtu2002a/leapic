@@ -6,7 +6,7 @@
     <color name="colorTrans">#00ff4081</color>
     <color name="colorSpeech">#ffffff</color>
     <color name="colorShadows">#767d81</color>
-    <color name="colorIcon">#69d1dc</color>
-    <color name="colorIconUnselect">#82d2da</color>
+    <color name="colorIcon">#055a8f</color>
+    <color name="colorIconUnselect">#055a8f</color>
     <color name="colorWhite">#ffffff</color>
 </resources>

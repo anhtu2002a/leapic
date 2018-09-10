@@ -18,9 +18,12 @@ public class Word {
         this.pic = pic;
     }
 
-    public Word(int id,String name) {
+    public Word(int id,String name,String spell,String exMean,byte[] pic) {
         this.id = id;
         this.name = name;
+        this.spell = spell;
+        this.exMean = exMean;
+        this.pic = pic;
     }
 
     public int getId() {

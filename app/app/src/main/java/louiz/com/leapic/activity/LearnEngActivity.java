@@ -1,13 +1,17 @@
 package louiz.com.leapic.activity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
+
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,9 +20,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 import louiz.com.leapic.R;
-import louiz.com.leapic.adapter.FragmentAdaper;
 import louiz.com.leapic.adapter.WordSliderAdapter;
-import louiz.com.leapic.model.Topic;
 import louiz.com.leapic.model.Word;
 
 public class LearnEngActivity extends AppCompatActivity {
@@ -42,18 +44,22 @@ public class LearnEngActivity extends AppCompatActivity {
     }
 
     private void importWordList() {
+        Intent intent = getIntent();
+        final String categoryId = intent.getStringExtra("categoryId");
         database = openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
-        Cursor cursor = database.rawQuery("select * FROM Word where TopicId = 1",null);
+        Cursor cursor = database.rawQuery("select * FROM Word where TopicId = "+categoryId,null);
         wordsList.clear();
         while (cursor.moveToNext()){
             int idWord = cursor.getInt(0);
             String nameWord = cursor.getString(1);
-            Word word = new Word(idWord,nameWord);
+            String spell = cursor.getString(3);
+            String mean = cursor.getString(4);
+            byte[] pic = cursor.getBlob(8);
+            Word word = new Word(idWord,nameWord,spell,mean,pic);
             wordsList.add(word);
         }
         cursor.close();
         adapter.notifyDataSetChanged();
-
     }
 
     private void addControl() {
@@ -61,7 +67,7 @@ public class LearnEngActivity extends AppCompatActivity {
         adapter = new WordSliderAdapter(LearnEngActivity.this,wordsList);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(position,true);
-
+     
 
     }
 

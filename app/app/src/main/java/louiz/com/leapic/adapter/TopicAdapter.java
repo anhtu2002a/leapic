@@ -58,6 +58,7 @@ public class TopicAdapter extends BaseAdapter {
         if(row ==null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout,null);
+
             holder.txtTopic = row.findViewById(R.id.txtTopic);
             holder.imgTopic = row.findViewById(R.id.imageTopic);
             row.setTag(holder);
@@ -66,7 +67,7 @@ public class TopicAdapter extends BaseAdapter {
             holder = (ViewHolder) row.getTag();
 
         }
-        Topic topic = topics.get(postition);
+        final Topic topic = topics.get(postition);
         holder.txtTopic.setText(topic.getName());
         byte[] imgTopic = topic.getPic();
         Bitmap bitmap = BitmapFactory.decodeByteArray(imgTopic,0,imgTopic.length);
@@ -75,6 +76,17 @@ public class TopicAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, LearnEngActivity.class);
+                String topicId = Integer.toString(topic.getiD());
+                intent.putExtra("categoryId",topicId);
+                context.startActivity(intent);
+            }
+        });
+        row.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, LearnEngActivity.class);
+                String topicId = Integer.toString(topic.getiD());
+                intent.putExtra("categoryId",topicId);
                 context.startActivity(intent);
             }
         });
