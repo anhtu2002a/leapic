@@ -7,21 +7,22 @@
 
     function plusDivs(n) {
       showDivs(slideIndex += n);
-      slideCount = slideCount < slideTotal ? slideCount + Number(n) : 1;
+      slideCount = slideCount < slideTotal ? slideCount + Number(n) : slideTotal--;
       if(slideCount < 1){
-        slideCount = slideTotal;
+        slideCount = 1;
       }else{
         document.getElementById("btn-previous").style.visibility = 'visible';
       }
       if(slideCount == slideTotal){
         document.getElementById("btn-next").style.visibility = 'hidden';
+        document.getElementById("btn-previous").style.visibility = 'hidden';
         document.getElementById("btn-end").style.visibility = 'visible';
       }else{
         document.getElementById("btn-end").style.visibility = 'hidden';
         document.getElementById("btn-next").style.visibility = 'visible';
       }
       if(slideCount == 1){
-        document.getElementById("btn-previous").style.visibility = 'visible';
+        document.getElementById("btn-previous").style.visibility = 'hidden';
       }
       console.log(slideCount);
     }

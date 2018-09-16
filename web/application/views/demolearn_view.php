@@ -21,9 +21,9 @@
                                 <!-- <a href="" id="word_ex" class="card-block col-md-12 col-lg-12"><?= $row->Ex; ?></a> -->
                   </div>
                 <?php endforeach ?>
-                    <button class="btn btn-dark col-lg-2 offset-lg-3" id="btn-previous" style="visibility:hidden" onclick="plusDivs(-1)"><= Quay lại</button>
-                    <button class="btn btn-success col-lg-2 offset-lg-1" id="btn-next" onclick="plusDivs(1)">Tiếp Theo =></button>   
-                    <button class="btn btn-danger col-lg-2 cd-popup-trigger" id="btn-end" style="visibility:hidden" >KẾT THÚC</button>
+                    <button class="btn btn-dark col-sm-4 offset-sm-1 col-lg-2 offset-lg-3" id="btn-previous" style="visibility:hidden" onclick="plusDivs(-1)"><= Quay lại</button>
+                    <button class="btn btn-success col-sm-4 offset-sm-2 col-lg-2 offset-lg-1" id="btn-next" onclick="plusDivs(1)">Tiếp Theo =></button>   
+                    <button class="btn btn-danger offset-sm-0 col-sm-4 col-lg-2 cd-popup-trigger" id="btn-end" style="visibility:hidden" >KẾT THÚC</button>
             </div>
         </div>
         <div class="cd-popup" role="alert">

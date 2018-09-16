@@ -1451,7 +1451,7 @@ p.mean{
     padding-bottom: 50px;
 }
 #category_name{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -1631,7 +1631,7 @@ p.mean{
 #btn-end{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: bold;
-    margin-left: -200px;
+    margin-left: -330px;
 }
 
 
