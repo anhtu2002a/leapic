@@ -8,7 +8,7 @@
                 <div class="col-12 col-sm-12 offset-sm-2 col-md-7 offset-md-3 col-lg-6 offset-lg-4" id="game_screen" >
                     
                         <div class="card d-inline-flex " >
-                        <div class="card-block col-md-12 col-lg-12" style="background-color: #CFE2E8" style="width: 500px;">
+                        <div class="card-block col-md-12 col-lg-12" style="" style="" id="game_card">
                             <div class="alert" style="background-color: #CFE2E8">
                                 <span name="question" id="question" class="question">Nói Hello đi nè :D</span> 
                                 <span name="final_span" id="final_span" class="final" value=""></span>
@@ -23,7 +23,6 @@
                                 <span id="recording"></span>
                             </div>
                         </div>
-                        </div> 
                 <!-- </div> -->
                 </div>
             </div>

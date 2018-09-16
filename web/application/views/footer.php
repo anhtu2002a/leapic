@@ -40,8 +40,13 @@
     <script src="<?php echo base_url(); ?>js/active.js"></script>
     <!-- Speech API JS -->
     <script src="<?php echo base_url(); ?>js/speechapi.js"></script>
+    <!-- Word Card's Slide JS -->
+    <script src="<?php echo base_url(); ?>js/wordcard_slide.js"></script>
 
-    <script src="<?php echo base_url(); ?>dist/js/swiper.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/responsivevoice.src.js"></script>
+
+    
+
     </body>
 
 </html>
