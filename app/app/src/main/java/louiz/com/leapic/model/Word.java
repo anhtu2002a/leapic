@@ -1,6 +1,8 @@
 package louiz.com.leapic.model;
 
-public class Word {
+import java.io.Serializable;
+
+public class Word implements Serializable{
     private int id,wordType,topicId,learn,favorite;
     private String name,spell,ex,exMean;
     private byte[] pic;
@@ -18,12 +20,14 @@ public class Word {
         this.pic = pic;
     }
 
-    public Word(int id,String name,String spell,String exMean,byte[] pic) {
+    public Word(int id,String name,String spell,String exMean,byte[] pic,int learn) {
         this.id = id;
         this.name = name;
         this.spell = spell;
         this.exMean = exMean;
         this.pic = pic;
+        this.learn = learn;
+
     }
 
     public int getId() {

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#185a9d</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTrans">#00ff4081</color>
     <color name="colorSpeech">#ffffff</color>
     <color name="colorShadows">#767d81</color>
-    <color name="colorIcon">#055a8f</color>
+    <color name="colorIcon">#43cea2</color>
     <color name="colorIconUnselect">#055a8f</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorNegative">#e74c3c</color>
+    <color name="colorPositive">#3498db</color>
 </resources>
