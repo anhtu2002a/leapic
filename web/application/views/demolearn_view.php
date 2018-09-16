@@ -7,7 +7,7 @@
             <div class="row h-100 align-items-center" id="learn_group">
                     
                 <?php foreach ($vol as $row):  ?>
-                  <div class="card col-sm-8 offset-sm-2 col-lg-5 offset-lg-3 card-block text-center mySlides" id="word_card">
+                  <div class="card col-sm-8 offset-sm-2 col-lg-5 offset-lg-3 card-block text-center mySlides" onload="Rvoice()" id="word_card">
                                 <div class="word_volume">
                                   <div class="word_volume_icon"><img src="<?php echo base_url(); ?>img/learn-img/icon-volume.png" onclick='responsiveVoice.speak("<?= $row->Word; ?>");' type='button'></img>
                                   </div>
@@ -22,7 +22,7 @@
                   </div>
                 <?php endforeach ?>
                     <button class="btn btn-dark col-sm-4 offset-sm-1 col-lg-2 offset-lg-3" id="btn-previous" style="visibility:hidden" onclick="plusDivs(-1)"><= Quay lại</button>
-                    <button class="btn btn-success col-sm-4 offset-sm-2 col-lg-2 offset-lg-1" id="btn-next" onclick="plusDivs(1)">Tiếp Theo =></button>   
+                    <button class="btn btn-success col-sm-4 offset-sm-2 col-lg-2 offset-lg-1" id="btn-next" onclick="plusDivs(1);">Tiếp Theo =></button>   
                     <button class="btn btn-danger offset-sm-0 col-sm-4 col-lg-2 cd-popup-trigger" id="btn-end" style="visibility:hidden" >KẾT THÚC</button>
             </div>
         </div>
@@ -44,12 +44,4 @@
     <!-- ***** Learn Area End ***** -->
     <?php include('footer.php'); ?>
 
-<script>
-      $("#btn-next").click = function(){
-      responsiveVoice.cancle();
-      responsiveVoice.speak(
-        document.getElementById("word_name")
-      );
-    };
-</script>
 
