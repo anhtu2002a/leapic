@@ -27,7 +27,8 @@
             android:name=".activity.TestActivity"
             android:label="@string/title_activity_test" />
         <activity android:name=".activity.SingleGameActivity" />
-        <activity android:name=".activity.LearnEngActivity"></activity>
+        <activity android:name=".activity.LearnEngActivity" />
+        <activity android:name=".activity.ExcersiceActivity"></activity>
     </application>
 
 </manifest>

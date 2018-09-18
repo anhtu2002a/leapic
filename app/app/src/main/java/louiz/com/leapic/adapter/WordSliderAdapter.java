@@ -1,6 +1,8 @@
 package louiz.com.leapic.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 
 import android.graphics.BitmapFactory;
@@ -12,17 +14,24 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.PagerAdapter;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.geniusforapp.fancydialog.FancyAlertDialog;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
 import louiz.com.leapic.R;
+import louiz.com.leapic.activity.ExcersiceActivity;
+import louiz.com.leapic.activity.LearnEngActivity;
 import louiz.com.leapic.activity.ListenActivity;
 import louiz.com.leapic.model.Word;
 
@@ -32,11 +41,13 @@ public class WordSliderAdapter extends PagerAdapter {
     private ArrayList<Word> wordList;
     private LayoutInflater inflater;
     private Context context;
+    private String categoryId;
     private TextToSpeech toSpeech;
     private  int result;
-    public WordSliderAdapter(Context context, ArrayList<Word> wordList) {
+    public WordSliderAdapter(Context context, ArrayList<Word> wordList,String categoryId) {
         this.context = context;
         this.wordList = wordList;
+        this.categoryId = categoryId;
         inflater = LayoutInflater.from(context);
     }
 
@@ -56,11 +67,14 @@ public class WordSliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup view, final int position) {
 
+
         View imageLayout = inflater.inflate(R.layout.word_slider, view, false);
 
         assert imageLayout != null;
+
         final ImageView img =  imageLayout
                 .findViewById(R.id.image);
+
         final TextView txtWord = imageLayout.findViewById(R.id.txtWord);
         final TextView txtSpell = imageLayout.findViewById(R.id.txtSpell);
         final TextView txtMean = imageLayout.findViewById(R.id.txtMean);
@@ -68,6 +82,7 @@ public class WordSliderAdapter extends PagerAdapter {
         txtWord.setText(wordList.get(position).getName());
         txtSpell.setText(wordList.get(position).getSpell());
         txtMean.setText(wordList.get(position).getExMean());
+
         toSpeech=new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -81,7 +96,6 @@ public class WordSliderAdapter extends PagerAdapter {
                 }
             }
         });
-
 
         btnVoice.setOnClickListener(new View.OnClickListener() {
             @Override
