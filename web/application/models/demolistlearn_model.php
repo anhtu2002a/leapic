@@ -35,18 +35,25 @@ class demolistlearn_model extends CI_Model {
 			'Pic' => $Pic,
 			'TopicId' => $TopicId,
     	);
-		$this->db->insert('words', $Word);
-		return $this->db->insert_id();
+		$result = $this->db->insert('words', $Word);
+		return $result;
 	}
 	public function getWordsByID($ID)
 	{
-		$this->db->select('*');
+		$this->db->select('word.Id,word.Name,word.TopicId,word.WordType,word.Spell,word.Mean,word.Pic,word.Learned');
 		$this->db->where('TopicId', $ID);
 		$this->db->from('word');
 		$this->db->join('topic', 'topic.ID = word.TopicId');
 		$Words= $this->db->get('');  //lay tu bang words va luu vao bien words
 		$Words= $Words->result(); //bien doi $words thanh 1 mang objec
 		return $Words;
+	}
+	public function markLearnedWord()
+	{
+		$Id = $this->input->post('word_Id');
+		$Learned = $this->input->post('word_learned');
+		$this->db->set('learned',$Learned);
+		$result=$this->db->update('word');
 	}
 }
 

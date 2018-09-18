@@ -28,8 +28,11 @@ class Demolistlearn extends CI_Controller {
 		// var_dump($volcabulary);
 
 		$this->load->view('demolearn_view', $vol, FALSE);
-
-
+	}
+	public function markasLearned()
+	{
+		$data = $this->demolistlearn_model->markLearnedWord();
+		echo json_encode($data);
 	}
 }
 

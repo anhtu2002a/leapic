@@ -2,7 +2,7 @@
 	
 	class words {
     	private  $id;
-        private  $learn;
+        private  $learned;
         private  $TopicId;
         private  $wordType;
         private  $favorite;
@@ -17,7 +17,7 @@
             $this->id = $id;
             $this->wordType = $wordType;
             $this->TopicId = $TopicId;
-            $this->learn = $learn;
+            $this->learned = $learned;
             $this->favorite = $favorite;
             $this->name = $name;
             $this->spell = $spell;
@@ -50,7 +50,7 @@
     /**
      * @return mixed
      */
-    public function getLearn()
+    public function getLearned()
     {
         return $this->learn;
     }
@@ -60,9 +60,9 @@
      *
      * @return self
      */
-    public function setLearn($learn)
+    public function setLearned($learned)
     {
-        $this->learn = $learn;
+        $this->learned = $learned;
 
         return $this;
     }

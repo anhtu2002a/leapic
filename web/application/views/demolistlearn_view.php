@@ -11,6 +11,7 @@
                         <p class="card-text" id="category_name"> <?= $value['Name'] ?> </p>
                     </div>
                     </div>
+                    
                 <?php endforeach ?>
             </div>
         </div>

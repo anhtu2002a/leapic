@@ -3,26 +3,27 @@
     var slideCount = 1;
     var slideTotal = document.getElementsByClassName("mySlides").length;
     console.log(slideTotal);
-    showDivs(slideIndex);
 
+    showDivs(slideIndex);
+    console.log(slideCount);
     function plusDivs(n) {
       showDivs(slideIndex += n);
       slideCount = slideCount < slideTotal ? slideCount + Number(n) : slideTotal--;
       if(slideCount < 1){
         slideCount = 1;
       }else{
-        document.getElementById("btn-previous").style.visibility = 'visible';
+        document.getElementById("btn_previous").style.visibility = 'visible';
       }
-      if(slideCount == slideTotal){
-        document.getElementById("btn-next").style.visibility = 'hidden';
-        document.getElementById("btn-previous").style.visibility = 'hidden';
-        document.getElementById("btn-end").style.visibility = 'visible';
+      if(slideCount == 5){
+        document.getElementById("btn_next").style.visibility = 'hidden';
+        document.getElementById("btn_previous").style.visibility = 'hidden';
+        document.getElementById("btn_end").style.visibility = 'visible';
       }else{
-        document.getElementById("btn-end").style.visibility = 'hidden';
-        document.getElementById("btn-next").style.visibility = 'visible';
+        document.getElementById("btn_end").style.visibility = 'hidden';
+        document.getElementById("btn_next").style.visibility = 'visible';
       }
       if(slideCount == 1){
-        document.getElementById("btn-previous").style.visibility = 'hidden';
+        document.getElementById("btn_previous").style.visibility = 'hidden';
       }
       console.log(slideCount);
     }
@@ -37,9 +38,11 @@
         slideIndex = x.length
       }
       for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
+         x[i].style.display = "none";   
+
       }
       x[slideIndex-1].style.display = "block";
+
     }
 
     jQuery(document).ready(function($){
@@ -48,6 +51,7 @@
         event.preventDefault();
         $('.cd-popup').addClass('is-visible');
         showCount.text(slideCount);
+        
       });
       
       //close popup
@@ -71,6 +75,12 @@
         });
     });
 
-    // Responsive Voice
+    $("#btn_end").on('click',function(){
+      var learned = document.getElementsByClassName("learned")
+      for (var i = 0; i < slideCount; i++) {
+        learned[i].innerHTML="1";
+      }
+
+    })
 
     

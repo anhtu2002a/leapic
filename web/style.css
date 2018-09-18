@@ -25,7 +25,7 @@
 :: 14.0 Footer Area CSS Start
 -------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Montserrat:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Montserrat:400,500,700');
 @import 'css/bootstrap.min.css';
 @import 'css/animate.css';
 @import 'css/magnific-popup.css';
@@ -45,7 +45,7 @@
 }
 
 body {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', Roboto;
    /* background-color: #fff;*/
 }
 
@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', Roboto;
     font-weight: 400;
     color: #000;
     line-height: 1.2;
@@ -1577,10 +1577,10 @@ p.mean{
     margin-bottom: 100px;
 }
 #word_img{
-    margin-top: 25px;
-    width: 400px;
-    height: 400px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 2px 6px 20px 2px rgba(0, 0, 0, 0.19);
+    margin-top: 0px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2), 0px 2px 10px 0px rgba(0, 0, 0, 0.19);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -1592,7 +1592,7 @@ p.mean{
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: transform 0.4s ease
 }
 #word_group{
@@ -1601,34 +1601,45 @@ p.mean{
 }
 #word_name{
     font-size: 20px;
-    font-weight: bold;
+    margin-bottom: -3px;
+    text-transform: uppercase;
+    font-family: Roboto;
+}
+#word_mean{
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: -10px;
+}
+#word_learned{
+    visibility: hidden;
 }
 .word_volume{
     position: absolute;
-    margin-top: 5px;
-    margin-left: -5px;
-    width: 55px;
-    height: 55px;
+    margin-top: -10px;
+    margin-left: 65px;
+    width: 45px;
+    height: 45px;
     background-color: #33ccff;
     border-radius: 50%;
     line-height: 50px;
     cursor: pointer;
 }
 .word_volume_icon {
-    width: 36px;
-    margin: auto;
+    width: 20px;
+    margin: -3px 0px 0 15px;
+
 
 }
 .swiper-container{
     width: 100px;
 }
-#btn-previous{
+#btn_previous{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#btn-next{
+#btn_next{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#btn-end{
+#btn_end{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: bold;
     margin-left: -330px;
@@ -1690,7 +1701,7 @@ p.mean{
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Roboto', Roboto;
 }
 .cd-popup-container p {
   padding: 3em 1em;
@@ -1703,7 +1714,7 @@ p.mean{
 }
 .cd-popup-container .cd-buttons li {
   float: left;
-  width: 50%;
+  width: 100%;
   list-style: none;
 }
 .cd-popup-container .cd-buttons a {
@@ -1718,18 +1729,18 @@ p.mean{
   transition: background-color 0.2s;
 }
 .cd-popup-container .cd-buttons li:first-child a {
-  background: #66d9ff;
+  background: #43cea2;
   border-radius: 0 0 0 .25em;
 }
 .no-touch .cd-popup-container .cd-buttons li:first-child a:hover {
-  background-color: #80dfff;
+  background-color: #185a9d;
 }
 .cd-popup-container .cd-buttons li:last-child a {
-  background: #b6bece;
+  background: #43cea2;
   border-radius: 0 0 .25em 0;
 }
 .no-touch .cd-popup-container .cd-buttons li:last-child a:hover {
-  background-color: #c5ccd8;
+  background-color: #185a9d;
 }
 .cd-popup-container .cd-popup-close {
   position: absolute;
@@ -1776,7 +1787,7 @@ p.mean{
 }
 #cd-popup-congra{
   margin-top: 10px;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Roboto', Roboto;
 }
 #cd-popup-count{
   margin-top: -50px;
