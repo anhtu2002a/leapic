@@ -11,4 +11,5 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorNegative">#e74c3c</color>
     <color name="colorPositive">#3498db</color>
+    <color name="colorPicker">#efb31a</color>
 </resources>

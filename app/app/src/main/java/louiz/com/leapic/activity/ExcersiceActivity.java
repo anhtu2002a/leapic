@@ -21,25 +21,23 @@ import louiz.com.leapic.customClass.CustomViewPager;
 import louiz.com.leapic.model.Word;
 
 public class ExcersiceActivity extends AppCompatActivity {
-    ViewPager viewPager;
+    CustomViewPager viewPager;
     ExcersiceFragmentAdaper adapter;
     String categoryId;
+    int page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excersice  );
         getSupportActionBar().setElevation(0);
-
-
-
         viewPager =  findViewById(R.id.viewpager);
+        viewPager.setPagingEnabled(false);
         Intent intent = getIntent();
         categoryId = intent.getStringExtra("categoryId");
-        adapter = new ExcersiceFragmentAdaper(this,getSupportFragmentManager(),categoryId);
+        page = intent.getIntExtra("page",0);
+        adapter = new ExcersiceFragmentAdaper(this,getSupportFragmentManager(),categoryId,page);
         viewPager.setAdapter(adapter);
 
-
-        // Give the TabLayout the ViewPager
     }
 
 

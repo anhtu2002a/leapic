@@ -5,7 +5,7 @@
     android:background="@drawable/background_learn_gradient"
     >
 
-    <android.support.v4.view.ViewPager
+    <louiz.com.leapic.customClass.CustomViewPager
         android:layout_width="match_parent"
         android:background="@color/colorTrans"
         android:layout_height="match_parent"
@@ -13,5 +13,4 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/viewpager"
         />
-
 </RelativeLayout>

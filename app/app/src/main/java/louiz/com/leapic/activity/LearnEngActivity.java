@@ -95,7 +95,19 @@ public class LearnEngActivity extends AppCompatActivity {
         progress.setProgress(20);
         btnCardEnd = findViewById(R.id.btnCardEnd);
         btnEnd = findViewById(R.id.btnEnd);
-
+        toSpeech=new TextToSpeech(LearnEngActivity.this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status==TextToSpeech.SUCCESS)
+                {
+                    result=toSpeech.setLanguage(Locale.US);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not supported in your device",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
 
@@ -112,7 +124,16 @@ public class LearnEngActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED)
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not supported in your device", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
 
+                    toSpeech.speak(wordsList.get(i).getName(),TextToSpeech.QUEUE_FLUSH,null);
+                }
+                
                 switch (i){
                     case 0:
                         progress.setProgress(20);

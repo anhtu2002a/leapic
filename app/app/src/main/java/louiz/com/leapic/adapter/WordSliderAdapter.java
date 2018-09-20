@@ -55,23 +55,18 @@ public class WordSliderAdapter extends PagerAdapter {
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View) object);
     }
-
-
     @Override
     public int getCount() {
         return wordList.size();
     }
-
-
-
     @Override
+
+
+
     public Object instantiateItem(ViewGroup view, final int position) {
 
-
         View imageLayout = inflater.inflate(R.layout.word_slider, view, false);
-
         assert imageLayout != null;
-
         final ImageView img =  imageLayout
                 .findViewById(R.id.image);
 
