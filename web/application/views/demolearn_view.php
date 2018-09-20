@@ -6,9 +6,9 @@
             <div class="row h-75 align-items-center" id="learn_group">                  
                 <?php foreach ($vol as $row):  ?>
                     <div class="card col-sm-6 offset-sm-2 col-md-8 col-lg-5 offset-lg-3 card-block text-center mySlides" id="word_card">
-                                <p name="ID" id="word_Id" class="Volcabulary"><?= $row->Id; ?></p>
-                                <p name="Volcabulary" id="word_name" class="Volcabulary"><?= $row->Name; ?></p>
-                                <p name="Mean" id="word_spell" class="spell"><?= $row->Spell; ?></p>
+                                <input name="ID" id="word_Id" class="Id" value="<?= $row->Id; ?>"></input>
+                                <p name="Name" id="word_name" class="Name"><?= $row->Name; ?></p>
+                                <p name="Spell" id="word_spell" class="spell"><?= $row->Spell; ?></p>
                                 <div class="word_volume">
                                     <div class="word_volume_icon"><img src="<?php echo base_url(); ?>img/learn-img/icon-volume.png" onclick='responsiveVoice.speak("<?= $row->Name; ?>");' type='button'></img>
                                     </div>

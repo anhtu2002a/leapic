@@ -8,7 +8,7 @@
     console.log(slideCount);
     function plusDivs(n) {
       showDivs(slideIndex += n);
-      slideCount = slideCount < slideTotal ? slideCount + Number(n) : slideTotal--;
+      slideCount = slideCount < slideTotal ? slideCount + Number(n) : slideTotal;
       if(slideCount < 1){
         slideCount = 1;
       }else{
@@ -76,10 +76,18 @@
     });
 
     $("#btn_end").on('click',function(){
-      var learned = document.getElementsByClassName("learned")
-      for (var i = 0; i < slideCount; i++) {
-        learned[i].innerHTML="1";
-      }
+      var word_learned = $('.learned');
+      var Id = $('.Id').val();
+      $('.learned').each(function(i, word_learned) {
+         if(i<slideCount){
+          word_learned = $('.learned').val("1");
+          var learned = word_learned.val();
+          console.log(Id);
+          console.log(learned);
+         }
+
+      });
+      
 
     })
 

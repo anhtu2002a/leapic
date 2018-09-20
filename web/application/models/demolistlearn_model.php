@@ -53,6 +53,7 @@ class demolistlearn_model extends CI_Model {
 		$Id = $this->input->post('word_Id');
 		$Learned = $this->input->post('word_learned');
 		$this->db->set('learned',$Learned);
+		$this->db->where('Id', $Id);
 		$result=$this->db->update('word');
 	}
 }
